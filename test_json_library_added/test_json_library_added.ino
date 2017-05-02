@@ -44,7 +44,7 @@ void setup() {
   // Most of the time, you can rely on the implicit casts.
   // In other case, you can do root["time"].as<long>();
   // radwan remove const from sensor
-  char* sensor = root["sensor"];
+ const char* sensor = root["sensor"];
   long time = root["time"];
   double latitude = root["data"][0];
   double longitude = root["data"][1];
@@ -59,8 +59,8 @@ void setup() {
 delay(3000);
 // change outside json just the parameter sensor
 sensor="Radwan";
- char* msg1=" \t Mostafa"; 
-strcat(sensor,msg1);
+ //char* msg1=" \t Mostafa"; 
+//strcat(sensor,msg1);
 //sensor+= msg1 ;
 
  // change inside json 
